@@ -8,5 +8,28 @@
 <body>
     <h1>Welcome to My Simple Website!</h1>
     <p>This is a simple page hosted on GitHub Pages.</p>
+
+
+    <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DF9000001HQz3',
+				'VP_SDO_Web_1',
+				'https://vp-sdo1.my.site.com/ESWVPSDOWeb11737730193696',
+				{
+					scrt2URL: 'https://vp-sdo1.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://vp-sdo1.my.site.com/ESWVPSDOWeb11737730193696/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+    
 </body>
 </html>
