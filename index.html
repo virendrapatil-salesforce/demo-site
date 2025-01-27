@@ -3,34 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Website</title>
+    <meta name="description" content="Welcome to [Company Name], a trusted Non-Banking Financial Company (NBFC) offering a range of financial solutions.">
+    <title>[Company Name] - NBFC Solutions</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file for styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .service-list {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .service-list div {
+            width: 30%;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .service-list div h3 {
+            margin-top: 0;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact-form button:hover {
+            background-color: #004c99;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Simple Website!</h1>
-    <p>This is a simple page hosted on GitHub Pages.</p>
 
+    <!-- Header Section -->
+    <header>
+        <h1>[Company Name] - Trusted NBFC Solutions</h1>
+        <p>Your partner in financial growth</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section id="home">
+        <h2>Welcome to [Company Name]</h2>
+        <p>At [Company Name], we are committed to providing innovative financial solutions to meet your diverse needs. We specialize in offering various financial products and services for individuals and businesses. Trust us to help you navigate the world of finance with expertise and personalized support.</p>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>[Company Name] is a leading Non-Banking Financial Company (NBFC) with years of experience in the financial sector. We offer a wide range of services including loans, asset management, and investment solutions. Our goal is to empower our clients to achieve their financial goals through customized services.</p>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div>
+                <h3>Personal Loans</h3>
+                <p>We offer flexible and affordable personal loans to help you manage life's unexpected expenses.</p>
+            </div>
+            <div>
+                <h3>Business Loans</h3>
+                <p>We provide business loans tailored to your company's needs to fuel growth and expansion.</p>
+            </div>
+            <div>
+                <h3>Investment Services</h3>
+                <p>Maximize your returns with our expert investment solutions designed to align with your financial goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to know more about our services, please get in touch with us. We're here to help!</p>
+
+        <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form action="submit_form.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 [Company Name]. All Rights Reserved.</p>
+        <p>Address: 123 Finance Street, City, Country</p>
+    </footer>
 
     <script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-
-			embeddedservice_bootstrap.init(
-				'00DF9000001HQz3',
-				'VP_SDO_GitSite',
-				'https://vp-sdo1.my.site.com/ESWVPSDOGitSite1737881007470',
-				{
-					scrt2URL: 'https://vp-sdo1.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-</script>
-<script type='text/javascript' src='https://vp-sdo1.my.site.com/ESWVPSDOGitSite1737881007470/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
-
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
     
+                embeddedservice_bootstrap.init(
+                    '00DF9000001HQz3',
+                    'VP_SDO_GitSite',
+                    'https://vp-sdo1.my.site.com/ESWVPSDOGitSite1737881007470',
+                    {
+                        scrt2URL: 'https://vp-sdo1.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        };
+    </script>
+    <script type='text/javascript' src='https://vp-sdo1.my.site.com/ESWVPSDOGitSite1737881007470/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+    
+
 </body>
 </html>
